@@ -29,7 +29,7 @@ class Book(models.Model):
 
     def get_absolute_url(self):
         """
-        Returns the url to access a particular book instance.
+        Returns the url to access a particular book instance
         """
         return reverse('book-detail', args=[str(self.id)])
 
