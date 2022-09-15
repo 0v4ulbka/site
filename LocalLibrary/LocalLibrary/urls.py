@@ -22,14 +22,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
-
-urlpatterns += [
     path('catalog/', include('catalog.urls')),
-]
-
-# Добавьте URL соотношения, чтобы перенаправить запросы с корневого URL, на URL приложения
-urlpatterns += [
     path('', RedirectView.as_view(url='/catalog/', permanent=True)),
 ]
 
